@@ -16,11 +16,12 @@ def generate_secret(low, high):
 
 
 def get_guess():
-    try:
-        '''get user's guess'''
-        return int(input('Guess the secret number? '))
-    except:
-        print("An exception occurred")
+    while True:
+        try:
+            '''get user's guess'''
+            return int(input('Guess the secret number? '))
+        except:
+            print("An exception occurred")
 
 
 def check_guess(guess, secret):
